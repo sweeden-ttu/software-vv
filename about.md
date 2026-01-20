@@ -21,6 +21,22 @@ Automated agents powered by LangChain and monitored through LangSmith provide:
 - Intelligent configuration assistance
 - Full observability and tracing
 
+### UI Test Agent
+An intelligent testing assistant that:
+- Generates Playwright tests from natural language descriptions
+- Analyzes page structure and identifies testable elements
+- Runs tests and provides detailed results analysis
+- Checks accessibility compliance
+- Suggests test improvements
+
+### UI Designer Agent
+An AI-powered design assistant that:
+- Analyzes current UI/UX design patterns
+- Generates CSS recommendations and color palettes
+- Creates HTML mockups for UI components
+- Suggests accessibility and responsive design improvements
+- Provides modern design best practices
+
 ### Kaggle Kernel Validation
 An agentic system that:
 - Monitors your enrolled competitions

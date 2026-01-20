@@ -14,3 +14,15 @@ __pycache__/
 .python-version
 venv/
 env/
+
+# Playwright
+playwright-report/
+test-results/
+playwright/.cache/
+
+# Generated test files (keep directory structure)
+tests/playwright/generated/*.spec.js
+!tests/playwright/generated/.gitkeep
+
+# Commit messages file (temporary)
+commit_messages.txt

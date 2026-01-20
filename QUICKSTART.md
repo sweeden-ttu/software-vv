@@ -113,11 +113,6 @@ our-canvas-instance
 - Check that your Canvas instance URL is correct
 - Ensure CORS is configured if accessing from browser
 
-### Kaggle API Issues
-- Verify `~/.kaggle/kaggle.json` exists and is valid
-- Check Kaggle API key permissions
-- Ensure you're enrolled in competitions
-
 ## Next Steps
 
 1. Customize the blog theme in `_config.yml`

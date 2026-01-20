@@ -1,0 +1,71 @@
+# Site Settings
+title: Software Verification and Validation
+description: Course site for Software Verification and Validation - covering formal methods, testing, and program correctness
+url: https://sweeden-ttu.github.io
+baseurl: "/software-vv"
+
+# Theme
+theme: jekyll-text-theme
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  modules:
+    output: true
+    permalink: /:collection/:name/
+  assignments:
+    output: true
+    permalink: /:collection/:name/
+
+# Course Configuration
+course:
+  name: "Software Verification and Validation"
+  code: "CS 401"
+  institution: "Texas Tech University"
+
+# Canvas LMS API Configuration
+canvas:
+  api_url: "https://texastech.instructure.com"
+  api_key: "24690~P3HcJcLvUkZaCynyEBBruB6Wm9kK34fDEBDZ3Fz3Em8M6WHxLCLDQAtwKGr7GLEx"
+
+# LangChain/LangSmith Configuration
+langchain:
+  api_key: ""
+  langsmith_api_key: ""
+
+# Composio Configuration
+composio:validation
+  api_key: ""
+
+# GitHub Configuration
+github:
+  repository: "sweeden-ttu/software-vv"
+  token: ""
+
+# Kaggle Configuration
+kaggle:
+  username: "sweeden"
+  key: ""
+
+# Exclude from processing
+exclude:p
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .gitignore
+  - README.md
+  - LICENSE
+  - agent_setup.py
+  - requirements.txt
+  - .env.example
+  - sync_canvas_site.py
+  - kaggle_agent.py

@@ -1,0 +1,84 @@
+---
+layout: default
+title: Home
+---
+
+<div class="home">
+  <h1 class="page-heading">Welcome to {{ site.title }}</h1>
+  
+  {% if site.course %}
+  <div class="course-info">
+    <p><strong>Course:</strong> {{ site.course.name }} ({{ site.course.code }})</p>
+    <p><strong>Institution:</strong> {{ site.course.institution }}</p>
+  </div>
+  {% endif %}
+
+  <div class="course-overview">
+    <p>This course explores the theory and practice of software verification and validation, covering formal methods, testing techniques, and program correctness.</p>
+    <p><a href="{{ '/syllabus' | relative_url }}" class="btn btn-primary">View Course Syllabus</a></p>
+  </div>
+
+  <div class="course-sections">
+    <div class="section-card">
+      <h2><a href="{{ '/syllabus' | relative_url }}">Syllabus</a></h2>
+      <p>Course description, learning objectives, schedule, and policies.</p>
+      <a href="{{ '/syllabus' | relative_url }}" class="btn btn-sm">View Syllabus →</a>
+    </div>
+
+    {% if site.data.navigation %}
+      {% for nav_item in site.data.navigation.main %}
+        {% if nav_item.title == 'Modules' and nav_item.children %}
+        <div class="section-card">
+          <h2><a href="{{ '/modules' | relative_url }}">Modules</a></h2>
+          <p>Weekly course modules and topics. {{ nav_item.children.size }} modules available.</p>
+          <ul class="module-preview">
+            {% for module in nav_item.children limit: 3 %}
+            <li><a href="{{ module.url | relative_url }}">{{ module.title }}</a></li>
+            {% endfor %}
+          </ul>
+          <a href="{{ '/modules' | relative_url }}" class="btn btn-sm">View All Modules →</a>
+        </div>
+        {% endif %}
+
+        {% if nav_item.title == 'Assignments' and nav_item.children %}
+        <div class="section-card">
+          <h2><a href="{{ '/assignments' | relative_url }}">Assignments</a></h2>
+          <p>Course assignments and projects. {{ nav_item.children.size }} assignments available.</p>
+          <ul class="assignment-preview">
+            {% for assignment in nav_item.children limit: 3 %}
+            <li><a href="{{ assignment.url | relative_url }}">{{ assignment.title }}</a></li>
+            {% endfor %}
+          </ul>
+          <a href="{{ '/assignments' | relative_url }}" class="btn btn-sm">View All Assignments →</a>
+        </div>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <div class="posts">
+    <h2>Recent Articles</h2>
+    <ul class="post-list">
+      {% for post in site.posts limit: 5 %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %d, %Y" }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        {% if post.categories %}
+        <span class="post-categories">
+          {% for category in post.categories %}
+          <span class="category-tag">{{ category }}</span>
+          {% endfor %}
+        </span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="canvas-integration">
+    <h2>Canvas LMS Integration</h2>
+    <div id="canvas-courses"></div>
+  </div>
+</div>

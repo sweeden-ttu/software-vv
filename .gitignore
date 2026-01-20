@@ -1,0 +1,16 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata/
+vendor/
+.bundle/
+Gemfile.lock
+node_modules/
+.env
+*.log
+kernels/
+*.pyc
+__pycache__/
+.python-version
+venv/
+env/

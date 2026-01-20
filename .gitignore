@@ -1,5 +1,28 @@
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata/
+vendor/
+.bundle/
+Gemfile.lock
+node_modules/
+.env
+*.log
+kernels/
+*.pyc
+__pycache__/
+.python-version
+venv/
+env/
+
+# Playwright
+playwright-report/
+test-results/
+playwright/.cache/
+
+# Generated test files (keep directory structure)
+tests/playwright/generated/*.spec.js
+!tests/playwright/generated/.gitkeep
+
+# Commit messages file (temporary)
+commit_messages.txt

@@ -1,0 +1,44 @@
+header:
+  - titles:
+      en: Home
+    url: /
+  - titles:
+      en: Lectures
+    url: /lectures/
+  - titles:
+      en: About
+    url: /about.html
+
+weeks:
+  - title: Part 1 - Fundamentals
+    children:
+      - title: "Week 1: Introduction"
+        url: /weeks/week1.html
+      - title: "Week 2: Testing Basics"
+        url: /weeks/week2.html
+  - title: Part 2 - Unit & Integration
+    children:
+      - title: "Week 3: Unit Testing"
+        url: /weeks/week3.html
+      - title: "Week 4: Integration Testing"
+        url: /weeks/week4.html
+  - title: Part 3 - System Level
+    children:
+      - title: "Week 5: System Testing"
+        url: /weeks/week5.html
+      - title: "Week 6: Regression Testing"
+        url: /weeks/week6.html
+  - title: Part 4 - Advanced Topics
+    children:
+      - title: "Week 7: Static Analysis"
+        url: /weeks/week7.html
+      - title: "Week 8: Model Checking"
+        url: /weeks/week8.html
+      - title: "Week 9: Formal Methods"
+        url: /weeks/week9.html
+      - title: "Week 10: Perf & Security"
+        url: /weeks/week10.html
+  - title: Part 5 - Conclusion
+    children:
+      - title: "Week 11: Final Project"
+        url: /weeks/week11.html

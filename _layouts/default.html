@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/canvas-integration.css' | relative_url }}">
+  {% feed_meta %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav class="site-nav">
+        {% if site.data.navigation %}
+          {% for item in site.data.navigation.main %}
+            {% if item.children %}
+              <div class="nav-dropdown">
+                <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                <div class="nav-dropdown-content">
+                  {% for child in item.children %}
+                    <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+            {% else %}
+              <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          <a href="{{ '/about' | relative_url }}">About</a>
+          <a href="{{ '/syllabus' | relative_url }}">Syllabus</a>
+          <a href="{{ '/canvas' | relative_url }}">Canvas LMS</a>
+        {% endif %}
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="wrapper">
+      {% if page.title == 'Home' or page.layout == 'home' %}
+        <div class="assignment-status-widget" id="assignment-status-widget">
+          <h3>Upcoming Assignments</h3>
+          <div id="assignment-list">
+            <p>Loading assignments...</p>
+          </div>
+        </div>
+      {% endif %}
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. Powered by Jekyll and Canvas LMS API.</p>
+    </div>
+  </footer>
+
+  <script src="{{ '/assets/js/canvas-integration.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/canvas-assignments.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/agent-setup.js' | relative_url }}"></script>
+</body>
+</html>

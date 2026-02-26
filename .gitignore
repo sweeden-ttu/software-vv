@@ -26,3 +26,4 @@ tests/playwright/generated/*.spec.js
 
 # Commit messages file (temporary)
 commit_messages.txt
+.DS_Store

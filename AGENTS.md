@@ -146,7 +146,7 @@ Create a `.env` file:
 ```bash
 OPENAI_API_KEY=your_openai_api_key_here
 LANGCHAIN_API_KEY=your_langchain_key_here
-LANGCHAIN_LANGSMITH_API_KEY=your_langsmith_key_here
+LANGCHAIN_LANGSMITH_API_KEY=lsv2_pt_YOUR_KEY_HERE
 ```
 
 ## Agent Architecture

@@ -163,7 +163,7 @@ def save_config(state: dict):
     env_content = f"""# API Keys Configuration
 COMPOSIO_API_KEY={state.get('composio_key', '')}
 LANGCHAIN_API_KEY={state.get('langchain_key', '')}
-LANGCHAIN_LANGSMITH_API_KEY={state.get('langchain_key', '')}
+LANGCHAIN_LANGSMITH_API_KEY=lsv2_pt_YOUR_KEY_HERE
 CANVAS_API_KEY={state.get('canvas_key', '')}
 CANVAS_API_URL={state.get('canvas_url', '')}
 GITHUB_TOKEN={state.get('github_token', '')}

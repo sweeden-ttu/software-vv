@@ -12,7 +12,6 @@ kernels/
 *.pyc
 __pycache__/
 .python-version
-venv/
 env/
 
 # Playwright
